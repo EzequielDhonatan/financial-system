@@ -17,7 +17,7 @@ return [
 
     'title_prefix' => '',
 
-    'title_postfix' => 'Ezequiel Dhonatan',
+    'title_postfix' => ' - Ezequiel Dhonatan',
 
     /*
     |--------------------------------------------------------------------------
