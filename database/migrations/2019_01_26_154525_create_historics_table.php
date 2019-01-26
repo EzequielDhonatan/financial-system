@@ -15,6 +15,17 @@ class CreateHistoricsTable extends Migration
     {
         Schema::create('historics', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id')->unsigned(); # USER_ID
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); # CHAVE ESTRANGEIRA
+
+            $table->enum('type', ['I', 'O', 'T']); # TYPE
+            $table->double('amout', 10, 2); # AMOUT
+            $table->double('total_before', 10, 2); # TOTAL BEFORE
+            $table->double('total_after', 10, 2); # TOTAL AFTER
+            $table->double('user_id_transaction', 10, 2)->nullable(); # USER ID TRANSACTION
+            $table->date('date'); # DATE
+
             $table->timestamps();
         });
     }
