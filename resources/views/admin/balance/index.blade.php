@@ -18,7 +18,7 @@
                 
             <a href="" class="btn btn-primary">
                 <i class="fa fa-cart-plus" aria-hidden="true">
-                        Recarregar
+                    Recarregar
                 </i>
             </a>
 
@@ -34,7 +34,7 @@
             <div class="small-box bg-green">
 
                 <div class="inner">
-                    <h3>R$90,00</h3>
+                    <h3>R$ {{ number_format($amout, 2, ',', '') }}</h3>
                 </div>
 
                 <div class="icon">

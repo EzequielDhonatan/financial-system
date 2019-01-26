@@ -9,6 +9,9 @@ class BalanceController extends Controller
 {
     public function index()
     {
-        return view('admin.balance.index');
+        $balance = auth()->user()->balance; # RECEBE O SALDO
+        $amout = $balance ? $balance->amount : 0; # VERIFICA O SALDO
+
+        return view('admin.balance.index', compact('amout'));
     }
 }
