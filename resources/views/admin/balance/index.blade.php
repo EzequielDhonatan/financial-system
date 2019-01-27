@@ -16,7 +16,7 @@
 
         <div class="box-header">
                 
-            <a href="" class="btn btn-primary">
+            <a href="{{ route('balance.deposit') }}" class="btn btn-primary">
                 <i class="fa fa-cart-plus" aria-hidden="true">
                     Recarregar
                 </i>
