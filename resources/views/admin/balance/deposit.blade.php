@@ -8,7 +8,7 @@
     <div class="breadcrumb">
         <li><a href="">Dashboard</a></li>
         <li><a href="">Saldo</a></li>
-        <li><a class="active" href="">Depositar</a></li>
+        <li><a class="active">Depositar</a></li>
     </div>
 @stop
 
@@ -25,7 +25,7 @@
                 {!! csrf_field() !!}
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="" placeholder="Valor Recarga">
+                    <input type="text" class="form-control" name="value" placeholder="Valor Recarga">
                 </div>
 
                 <div class="form-group">

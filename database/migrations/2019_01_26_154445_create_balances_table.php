@@ -19,7 +19,7 @@ class CreateBalancesTable extends Migration
             $table->integer('user_id')->unsigned(); # USER_ID
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); # CHAVE ESTRANGEIRA
 
-            $table->double('amout', 10, 2); # AMOUT
+            $table->double('amout', 10, 2)->default(0); # AMOUT
         });
     }
 
