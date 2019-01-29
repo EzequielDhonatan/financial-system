@@ -31,6 +31,9 @@
         </div> <!-- box-header -->
 
         <div class="box-body">
+
+            @include('admin.includes.alerts')
+
             <div class="small-box bg-green">
 
                 <div class="inner">
@@ -44,6 +47,7 @@
                 <a href="#" class="small-box-footer">Histórico<i class="fa fa-arrow-circle-right"></i></a>
 
             </div> <!-- small-box bg-green -->
+            
         </div> <!-- box-body -->
 
     </div> <!-- box -->

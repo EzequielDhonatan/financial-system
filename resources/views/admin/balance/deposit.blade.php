@@ -20,6 +20,9 @@
         </div> <!-- box-header -->
 
         <div class="box-body">
+
+            @include('admin.includes.alerts')
+
             <form class="form" method="POST" action="{{ route('deposit.store') }}">
 
                 {!! csrf_field() !!}
@@ -33,6 +36,7 @@
                 </div>
 
             </form> <!-- form -->
+
         </div> <!-- box-body -->
 
     </div> <!-- box -->
