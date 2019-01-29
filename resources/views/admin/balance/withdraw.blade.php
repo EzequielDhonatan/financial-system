@@ -23,7 +23,7 @@
 
             @include('admin.includes.alerts')
 
-            <form class="form" method="POST" action="{{ route('withdrawn.store') }}">
+            <form class="form" method="POST" action="{{ route('withdraw.store') }}">
 
                 {!! csrf_field() !!}
 

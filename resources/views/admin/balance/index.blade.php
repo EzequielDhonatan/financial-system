@@ -23,7 +23,7 @@
             </a>
 
             @if ($amout > 0)
-                <a href="{{ route('balance.withdrawn') }}" class="btn btn-danger">
+                <a href="{{ route('balance.withdraw') }}" class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true">
                         Sacar
                     </i>
