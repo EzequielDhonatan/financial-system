@@ -1,14 +1,14 @@
 @extends('adminlte::page')
 
-@section('title', 'Nova Recarga')
+@section('title', 'Retirada')
 
 @section('content_header')
-    <h1>Nova Recarga</h1>
+    <h1>Fazer Retirada</h1>
 
     <div class="breadcrumb">
         <li><a href="">Dashboard</a></li>
         <li><a href="">Saldo</a></li>
-        <li><a class="active">Depositar</a></li>
+        <li><a class="active">Retirada</a></li>
     </div>
 @stop
 
@@ -16,23 +16,23 @@
     <div class="box">
 
         <div class="box-header">
-            <h3>Fazer Recarga</h3>
+            <h3>Fazer Retirada</h3>
         </div> <!-- box-header -->
 
         <div class="box-body">
 
             @include('admin.includes.alerts')
 
-            <form class="form" method="POST" action="{{ route('deposit.store') }}">
+            <form class="form" method="POST" action="{{ route('withdrawn.store') }}">
 
                 {!! csrf_field() !!}
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="value" placeholder="Valor Recarga">
+                    <input type="text" class="form-control" name="value" placeholder="Valor Retirada">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success">Recarregar</button>
+                    <button type="submit" class="btn btn-success">Sacar</button>
                 </div>
 
             </form> <!-- form -->

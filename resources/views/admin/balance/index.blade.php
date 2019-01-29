@@ -22,11 +22,13 @@
                 </i>
             </a>
 
-            <a href="" class="btn btn-danger">
-                <i class="fa fa-cart-plus" aria-hidden="true">
-                    Sacar
-                </i>
-            </a>
+            @if ($amout > 0)
+                <a href="{{ route('balance.withdrawn') }}" class="btn btn-danger">
+                    <i class="fa fa-cart-plus" aria-hidden="true">
+                        Sacar
+                    </i>
+                </a>
+            @endif
 
         </div> <!-- box-header -->
 
