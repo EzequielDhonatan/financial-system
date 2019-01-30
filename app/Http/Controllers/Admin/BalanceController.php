@@ -10,6 +10,8 @@ use App\Http\Requests\MoneyValidationFormRequest;
 
 class BalanceController extends Controller
 {
+    private $totalPage = 10;
+
     public function index()
     {
         $balance = auth()->user()->balance; # RECEBE O SALDO
@@ -106,7 +108,7 @@ class BalanceController extends Controller
 
     public function historic()
     {
-        $historics = auth()->user()->historics()->with(['userSender'])->get();
+        $historics = auth()->user()->historics()->with(['userSender'])->paginate($this->totalPage);
 
         return view('admin.balance.historics', compact('historics'));
     }

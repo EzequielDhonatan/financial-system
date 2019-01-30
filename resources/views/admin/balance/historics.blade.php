@@ -56,6 +56,8 @@
 
             </table> <! table -->
 
+            {!! $historics->links() !!}
+
         </div> <!-- box-body -->
 
     </div> <!-- box -->
