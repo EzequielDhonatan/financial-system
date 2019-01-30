@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Nova Transferir Saldo')
+@section('title', 'Nova Transferirência')
 
 @section('content_header')
     <h1>Transferir</h1>
