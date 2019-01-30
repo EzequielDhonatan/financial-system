@@ -65,8 +65,10 @@
                                 @endif
                             </td>
                         </tr>
-                        @empty
-                        
+                        @emptys
+                        <tr>
+                            <td class="text-center">Nenhum Histórico de Movimentações Encotrado!</td>
+                        </tr>
                     @endforelse
 
                 </tbody>
