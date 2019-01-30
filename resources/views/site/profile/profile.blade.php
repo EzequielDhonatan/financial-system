@@ -8,7 +8,7 @@
 
 @include('includes.alerts')
 
-<form class="form" method="POST" action="{{ route('profile.update') }}">
+<form class="form" method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
 
     {{ csrf_field() }}
 
