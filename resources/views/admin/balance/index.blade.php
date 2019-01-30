@@ -16,7 +16,7 @@
 
         <div class="box-header">
                 
-            <a href="{{ route('balance.deposit') }}" class="btn btn-primary">
+            <a href="{{ route('balance.deposit') }}" class="btn btn-success">
                 <i class="fa fa-cart-plus" aria-hidden="true">
                     Recarregar
                 </i>
@@ -24,8 +24,14 @@
 
             @if ($amout > 0)
                 <a href="{{ route('balance.withdraw') }}" class="btn btn-danger">
-                    <i class="fa fa-cart-plus" aria-hidden="true">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true">
                         Sacar
+                    </i>
+                </a>
+
+                <a href="{{ route('balance.transfer') }}" class="btn btn-info">
+                    <i class="fa fa-exchange" aria-hidden="true">
+                        Transferir
                     </i>
                 </a>
             @endif
