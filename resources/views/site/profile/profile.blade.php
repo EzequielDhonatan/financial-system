@@ -19,7 +19,7 @@
 
     <div class="form-group">
         <label for="email">E-mail</label>
-        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" placeholder="E-mail" disabled>
+        <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" placeholder="E-mail">
     </div> <!-- form-control -->
 
     <div class="form-group">
