@@ -15,9 +15,9 @@ class Historic extends Model
     public function type($type = null)
     {
         $types = [
-            'I' => 'Entrada',
-            'O' => 'Saque',
-            'T' => 'Transferência',
+            'I' => 'Entradas',
+            'O' => 'Saques',
+            'T' => 'Transferências',
         ];
 
         if (!$type)
@@ -27,6 +27,11 @@ class Historic extends Model
             return 'Recebido';
 
         return $types[$type];
+    }
+
+    public function scopeUserAuth($query)
+    {
+        return $query->where('user_id', auth()->user()->id);
     }
 
     public function user()
@@ -55,8 +60,12 @@ class Historic extends Model
 
             if (isset($data['type']))
                 $query->where('type', $data['type']);
-        })//->toSql(); dd($historics);
+        })
+        // ->where('user_id', auth()->user()->id)
+        ->userAuth()
+        ->with(['userSender'])
         ->paginate($totalPage);
+        // ->toSql(); dd($historics);
 
         return $historics;
     }
