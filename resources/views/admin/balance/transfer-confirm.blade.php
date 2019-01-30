@@ -25,6 +25,7 @@
             @include('admin.includes.alerts')
 
             <p><strong>Recebedor: </strong>{{ $sender->name }}</p>
+            <p><strong>Seu Saldo Atual: </strong>R${{ number_format($balance->amount, 2, ',', '') }}</p>
 
             <form class="form" method="POST" action="{{ route('transfer.store') }}">
 
@@ -33,7 +34,7 @@
                 <input type="hidden" class="form-control" name="sender_id" value="{{ $sender->id }}">
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="balance" placeholder="Valor:">
+                    <input type="text" class="form-control" name="value" placeholder="Valor:">
                 </div>
 
                 <div class="form-group">
