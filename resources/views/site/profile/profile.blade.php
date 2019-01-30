@@ -6,6 +6,8 @@
 
 <h1>Meu Perfil</h1>
 
+@include('includes.alerts')
+
 <form class="form" method="POST" action="{{ route('profile.update') }}">
 
     {{ csrf_field() }}
