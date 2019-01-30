@@ -28,6 +28,10 @@
     </div> <!-- form-control -->
 
     <div class="form-group">
+        @if (auth()->user()->image != null)
+            <img src="{{ url('storage/users/'.auth()->user()->image) }}" alt="{{ auth()->user()->name }}" style="max-width: 50px; ">
+        @endif
+
         <label for="image">Imagem:</label>
         <input type="file" class="form-control" id="image" name="image">
     </div> <!-- form-control -->
